@@ -38,7 +38,7 @@
 	</target>
 	
 	<!-- Package the build into a JAR File after compilation & testing tasks are completed-->
-	<target name="buildDist" depends="compile">
+	<target name="buildDist" depends="compile, test">
 		<jar destfile="${dist.dir}/jcg.jar" basedir="${bin.dir}" excludes="**/*Test.class">
 		</jar>
 	</target>
